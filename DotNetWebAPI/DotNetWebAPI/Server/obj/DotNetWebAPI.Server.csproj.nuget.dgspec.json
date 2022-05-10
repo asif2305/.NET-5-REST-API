@@ -1,0 +1,216 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Server\\DotNetWebAPI.Server.csproj": {}
+  },
+  "projects": {
+    "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Client\\DotNetWebAPI.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Client\\DotNetWebAPI.Client.csproj",
+        "projectName": "DotNetWebAPI.Client",
+        "projectPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Client\\DotNetWebAPI.Client.csproj",
+        "packagesPath": "C:\\Users\\Asif\\.nuget\\packages\\",
+        "outputPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Asif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Shared\\DotNetWebAPI.Shared.csproj": {
+                "projectPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Shared\\DotNetWebAPI.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.4, 6.0.4]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Server\\DotNetWebAPI.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Server\\DotNetWebAPI.Server.csproj",
+        "projectName": "DotNetWebAPI.Server",
+        "projectPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Server\\DotNetWebAPI.Server.csproj",
+        "packagesPath": "C:\\Users\\Asif\\.nuget\\packages\\",
+        "outputPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Asif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Client\\DotNetWebAPI.Client.csproj": {
+                "projectPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Client\\DotNetWebAPI.Client.csproj"
+              },
+              "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Shared\\DotNetWebAPI.Shared.csproj": {
+                "projectPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Shared\\DotNetWebAPI.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Shared\\DotNetWebAPI.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Shared\\DotNetWebAPI.Shared.csproj",
+        "projectName": "DotNetWebAPI.Shared",
+        "projectPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Shared\\DotNetWebAPI.Shared.csproj",
+        "packagesPath": "C:\\Users\\Asif\\.nuget\\packages\\",
+        "outputPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Asif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
