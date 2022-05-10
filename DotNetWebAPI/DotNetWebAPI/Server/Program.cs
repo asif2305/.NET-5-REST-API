@@ -1,9 +1,15 @@
+using DotNetWebAPI.Server.Models;
 using Microsoft.AspNetCore.ResponseCompression;
-
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection"));
+
+});
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 

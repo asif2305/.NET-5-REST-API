@@ -1,0 +1,12 @@
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\bin\Debug\net6.0\DotNetWebAPI.Shared.deps.json
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\bin\Debug\net6.0\DotNetWebAPI.Shared.dll
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\bin\Debug\net6.0\DotNetWebAPI.Shared.pdb
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\obj\Debug\net6.0\DotNetWebAPI.Shared.csproj.AssemblyReference.cache
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\obj\Debug\net6.0\DotNetWebAPI.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\obj\Debug\net6.0\DotNetWebAPI.Shared.AssemblyInfoInputs.cache
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\obj\Debug\net6.0\DotNetWebAPI.Shared.AssemblyInfo.cs
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\obj\Debug\net6.0\DotNetWebAPI.Shared.csproj.CoreCompileInputs.cache
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\obj\Debug\net6.0\DotNetWebAPI.Shared.dll
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\obj\Debug\net6.0\refint\DotNetWebAPI.Shared.dll
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\obj\Debug\net6.0\DotNetWebAPI.Shared.pdb
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\DotNetWebAPI\DotNetWebAPI\Shared\obj\Debug\net6.0\ref\DotNetWebAPI.Shared.dll
