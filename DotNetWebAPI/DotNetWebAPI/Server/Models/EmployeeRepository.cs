@@ -74,12 +74,21 @@ namespace DotNetWebAPI.Server.Models
                 result.Gender = employee.Gender;
                 result.Email = employee.Email;
                 result.DateOfBirth= employee.DateOfBirth;
-                result.DepartmentId = employee.DepartmentId;
+                if(employee.DepartmentId != 0)
+                {
+                    result.DepartmentId = employee.DepartmentId;
+                }
+                else if(employee.Department != null)
+                {
+                    result.DepartmentId = employee.Department.DepartmentId;
+                }
                 result.PhotoPath = employee.PhotoPath;
                 await appDbContext.SaveChangesAsync();
                 return result;
             }
             return null;
         }
+
+
     }
 }

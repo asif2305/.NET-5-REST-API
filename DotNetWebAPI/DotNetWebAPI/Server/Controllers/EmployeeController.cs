@@ -99,5 +99,27 @@ namespace DotNetWebAPI.Server.Controllers
                           "Error updating employee record");
             }
         }
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> DeleteEmployee(int id)
+        {
+            try
+            {
+
+                var employeeToDelete = await employeeRepository.GetEmployee(id);
+                if (employeeToDelete == null)
+                {
+                    return NotFound($"Employee with Id = {id} not found");
+                }
+                await employeeRepository.DeleteEmployee(id);
+                return Ok($"Employee with Id = {id} deleted");
+
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                          "Error deleting employee record");
+            }
+        }
     }
 }
