@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wjoM1+uSXh20X+XV+itmhmlFdau7qLmia3qh6ZrhqQFrTSmeSP7pAjo1khZSsZAyR7px6BcjUED+fg/McZlL8A==",
+  "dgSpecHash": "BByWQ9botKMYC9ABGNq4RCHokugrIVyYnN1ZzhkEtEyAwapaO9+0MxsOECqZOd8J8ci2+AMCcntN/AKPc7zfMg==",
   "success": true,
   "projectFilePath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\DotNetWebAPI\\DotNetWebAPI\\Client\\DotNetWebAPI.Client.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\Asif\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Asif\\.nuget\\packages\\microsoft.jsinterop\\6.0.4\\microsoft.jsinterop.6.0.4.nupkg.sha512",
     "C:\\Users\\Asif\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.4\\microsoft.jsinterop.webassembly.6.0.4.nupkg.sha512",
+    "C:\\Users\\Asif\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Asif\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\Asif\\.nuget\\packages\\system.io.pipelines\\6.0.2\\system.io.pipelines.6.0.2.nupkg.sha512",
     "C:\\Users\\Asif\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
