@@ -60,7 +60,7 @@ namespace DotNetWebAPI.Server.Controllers
             try
             {
                if(employee == null) return BadRequest();
-               var emp = employeeRepository.GetEmployeeByEmail(employee.Email);
+               var emp = await employeeRepository.GetEmployeeByEmail(employee.Email);
                if(emp != null)
                 {
                     ModelState.AddModelError("Email", "Employee email already in use");
@@ -75,6 +75,28 @@ namespace DotNetWebAPI.Server.Controllers
 
                 return StatusCode(StatusCodes.Status500InternalServerError,
                           "Error creating new employee record");
+            }
+        }
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult<Employee>> UpdateEmployee(int id,Employee employee)
+        {
+            try
+            {
+                if (id != employee.EmployeeId ) return BadRequest("Employee ID mismatch");
+
+                var employeeToUpdate = await employeeRepository.GetEmployee(id);
+                if (employeeToUpdate == null)
+                {
+                    return NotFound($"Employee with Id = {id} not found");
+                }
+                 return await employeeRepository.UpdateEmployee(employee);
+               
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                          "Error updating employee record");
             }
         }
     }
