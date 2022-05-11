@@ -13,6 +13,26 @@ namespace DotNetWebAPI.Server.Controllers
         {
             this.employeeRepository = employeeRepository;
         }
+
+        [HttpGet("{search}")]
+        public async Task<ActionResult<IEnumerable<Employee>>> Search(string? name, Gender? gender)
+        {
+            try
+            {
+                var result = await employeeRepository.Search(name, gender);
+                if (result.Any())
+                {
+                    return Ok(result);
+                }
+                return NotFound();
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                        "Error retrieving data from the database");
+            }
+        }
         [HttpGet]
         public async Task<ActionResult> GetEmployees()
         {
@@ -33,7 +53,7 @@ namespace DotNetWebAPI.Server.Controllers
             }
             
         }
-
+       
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Employee>> GetEmployees(int id)
         {
@@ -121,5 +141,6 @@ namespace DotNetWebAPI.Server.Controllers
                           "Error deleting employee record");
             }
         }
+
     }
 }
