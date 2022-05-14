@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <Label>Hello World</Label>
-        <Button>Click Me</Button>
-    </StackPanel>
+    <Grid>
+        <Button
+            x:Name="mybutton"
+            Content="hello world"
+            ></Button>
+    </Grid>
 </Window>
