@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CKPFAm4/Gzda6iJbe6jvjQmmZqGh4t1UH6exPs+n0ALP/vGFheJpbK7fd4wjTL61OiZhi0QudfWnGndiJB4ISw==",
+  "dgSpecHash": "vcRC64IwB2fERuIV5byaaIp5slkW5yYdsVVaMXeg+QS8Y6EhB21oHfmlXLSMh3I3rBwk1DH9RMQSkA8Ii8gbeQ==",
   "success": true,
-  "projectFilePath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\WpfApp\\TextBlock\\TextBlock.csproj",
+  "projectFilePath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\WpfApp\\TextBlock\\TextBlockDemo.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\WpfApp\\TextBlock\\TextBlock.csproj",
-      "projectName": "TextBlock",
-      "projectPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\WpfApp\\TextBlock\\TextBlock.csproj",
+      "projectUniqueName": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\WpfApp\\TextBlock\\TextBlockDemo.csproj",
+      "projectName": "TextBlockDemo",
+      "projectPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\WpfApp\\TextBlock\\TextBlockDemo.csproj",
       "packagesPath": "C:\\Users\\Asif\\.nuget\\packages\\",
       "outputPath": "D:\\Github Repo\\GitHub\\ASP.NET\\.NET-5-REST-API\\WpfApp\\TextBlock\\obj\\",
       "projectStyle": "PackageReference",
