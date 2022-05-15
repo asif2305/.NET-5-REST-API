@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBoxDemo", "TextBoxDemo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonDemo", "ButtonDemo\ButtonDemo.csproj", "{7B18E0FD-FE7F-4BDC-9601-F9173F634DE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioButtonDemo", "RadioButtonDemo\RadioButtonDemo.csproj", "{63C7752C-D546-473B-ADE4-BC06D5754F8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{7B18E0FD-FE7F-4BDC-9601-F9173F634DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B18E0FD-FE7F-4BDC-9601-F9173F634DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B18E0FD-FE7F-4BDC-9601-F9173F634DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C7752C-D546-473B-ADE4-BC06D5754F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C7752C-D546-473B-ADE4-BC06D5754F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C7752C-D546-473B-ADE4-BC06D5754F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C7752C-D546-473B-ADE4-BC06D5754F8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

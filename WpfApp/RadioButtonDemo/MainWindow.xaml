@@ -1,0 +1,42 @@
+﻿<Window x:Class="RadioButtonDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RadioButtonDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label FontWeight="Bold">Who do you vote for</Label>
+        <RadioButton GroupName="Letter" FontSize="30" VerticalContentAlignment="Center">
+            <WrapPanel>
+                <Image Height="20" Source="https://cdn.pixabay.com/photo/2013/07/12/12/36/letter-146002__340.png"></Image>
+                <Label>H</Label>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton GroupName="Letter" FontSize="30" VerticalContentAlignment="Center" x:Name="rbP" Checked="rbH_Checked" Unchecked="rbH_Unchecked">
+            <WrapPanel>
+                <Image Height="20" Source="https://cdn.pixabay.com/photo/2013/07/12/12/37/letter-146010_960_720.png"></Image>
+                <Label Name="rbLblP">P</Label>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton GroupName="Letter" FontSize="30" VerticalContentAlignment="Center">
+            <WrapPanel>
+                <Image Height="20" Source="https://cdn.pixabay.com/photo/2013/07/12/12/36/letter-146005_960_720.png"></Image>
+                <Label>K</Label>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton GroupName="Letter" FontSize="30" VerticalContentAlignment="Center">
+            <WrapPanel>
+                <Image Height="20" Source="https://cdn.pixabay.com/photo/2013/07/12/12/37/letter-146016_960_720.png"></Image>
+                <Label>V</Label>
+            </WrapPanel>
+        </RadioButton>
+
+        <Label FontWeight="Bold">How do you feel about it?</Label>
+        <RadioButton GroupName="Feeling">Very good</RadioButton>
+        <RadioButton GroupName="Feeling">Good</RadioButton>
+        <RadioButton GroupName="Feeling">Happy</RadioButton>
+        <RadioButton GroupName="Feeling">Not happy</RadioButton>
+    </StackPanel>
+</Window>
