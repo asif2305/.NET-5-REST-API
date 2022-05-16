@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckBoxDemo", "CheckBoxDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordBoxDemo", "PasswordBoxDemo\PasswordBoxDemo.csproj", "{67776F00-C99A-444A-AD9E-C0C90FF9B6ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliderDemo", "SliderDemo\SliderDemo.csproj", "{153F9CC8-C927-4C7D-8550-BF525409E1AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{67776F00-C99A-444A-AD9E-C0C90FF9B6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67776F00-C99A-444A-AD9E-C0C90FF9B6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67776F00-C99A-444A-AD9E-C0C90FF9B6ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153F9CC8-C927-4C7D-8550-BF525409E1AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153F9CC8-C927-4C7D-8550-BF525409E1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153F9CC8-C927-4C7D-8550-BF525409E1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153F9CC8-C927-4C7D-8550-BF525409E1AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
