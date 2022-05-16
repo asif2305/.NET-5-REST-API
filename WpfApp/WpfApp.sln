@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ButtonDemo", "ButtonDemo\Bu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioButtonDemo", "RadioButtonDemo\RadioButtonDemo.csproj", "{63C7752C-D546-473B-ADE4-BC06D5754F8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBoxDemo", "CheckBoxDemo\CheckBoxDemo.csproj", "{3A115908-7AEC-46B9-9C66-F5C5086248AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckBoxDemo", "CheckBoxDemo\CheckBoxDemo.csproj", "{3A115908-7AEC-46B9-9C66-F5C5086248AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordBoxDemo", "PasswordBoxDemo\PasswordBoxDemo.csproj", "{67776F00-C99A-444A-AD9E-C0C90FF9B6ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{3A115908-7AEC-46B9-9C66-F5C5086248AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A115908-7AEC-46B9-9C66-F5C5086248AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A115908-7AEC-46B9-9C66-F5C5086248AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67776F00-C99A-444A-AD9E-C0C90FF9B6ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67776F00-C99A-444A-AD9E-C0C90FF9B6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67776F00-C99A-444A-AD9E-C0C90FF9B6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67776F00-C99A-444A-AD9E-C0C90FF9B6ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
