@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordBoxDemo", "Password
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliderDemo", "SliderDemo\SliderDemo.csproj", "{153F9CC8-C927-4C7D-8550-BF525409E1AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalenderDemo", "CalenderDemo\CalenderDemo.csproj", "{999F38C9-EE3A-48E4-BCB6-6EDCD7B6C9E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{153F9CC8-C927-4C7D-8550-BF525409E1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{153F9CC8-C927-4C7D-8550-BF525409E1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{153F9CC8-C927-4C7D-8550-BF525409E1AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999F38C9-EE3A-48E4-BCB6-6EDCD7B6C9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999F38C9-EE3A-48E4-BCB6-6EDCD7B6C9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999F38C9-EE3A-48E4-BCB6-6EDCD7B6C9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999F38C9-EE3A-48E4-BCB6-6EDCD7B6C9E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,23 @@
+﻿<Window x:Class="CalenderDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalenderDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="300">
+    <StackPanel>
+        <Viewbox Stretch="Uniform">
+            <Calendar 
+                x:Name="myCalender"
+                SelectedDatesChanged="myCalender_SelectedDatesChanged"
+                SelectedDate="01.01.2022"
+                DisplayMode="Month">
+                <Calendar.BlackoutDates>
+                    <CalendarDateRange Start="05.01.2022" End="05.10.2022"/>
+                </Calendar.BlackoutDates>
+            </Calendar>
+        </Viewbox>
+        <TextBlock x:Name="myTextBlock"></TextBlock>
+    </StackPanel>
+</Window>
