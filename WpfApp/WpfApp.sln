@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatePickerDemo", "DatePicke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpanderDemo", "ExpanderDemo\ExpanderDemo.csproj", "{FECD6896-14DE-4300-BA37-6FA44862AE05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridDemo", "GridDemo\GridDemo.csproj", "{2179341D-487C-4D1C-969F-A01E14CE070E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{FECD6896-14DE-4300-BA37-6FA44862AE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FECD6896-14DE-4300-BA37-6FA44862AE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FECD6896-14DE-4300-BA37-6FA44862AE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2179341D-487C-4D1C-969F-A01E14CE070E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2179341D-487C-4D1C-969F-A01E14CE070E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2179341D-487C-4D1C-969F-A01E14CE070E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2179341D-487C-4D1C-969F-A01E14CE070E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
