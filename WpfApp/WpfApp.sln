@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpanderDemo", "ExpanderDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridDemo", "GridDemo\GridDemo.csproj", "{2179341D-487C-4D1C-969F-A01E14CE070E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackPanelDemo", "StackPanelDemo\StackPanelDemo.csproj", "{68D45FB0-9A97-4FBF-AC85-EDF8C82B2D25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{2179341D-487C-4D1C-969F-A01E14CE070E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2179341D-487C-4D1C-969F-A01E14CE070E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2179341D-487C-4D1C-969F-A01E14CE070E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D45FB0-9A97-4FBF-AC85-EDF8C82B2D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D45FB0-9A97-4FBF-AC85-EDF8C82B2D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D45FB0-9A97-4FBF-AC85-EDF8C82B2D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D45FB0-9A97-4FBF-AC85-EDF8C82B2D25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
