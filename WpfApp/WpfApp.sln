@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalenderDemo", "CalenderDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatePickerDemo", "DatePickerDemo\DatePickerDemo.csproj", "{69A4D16C-4AF2-4621-BFDA-17ADA4E88158}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpanderDemo", "ExpanderDemo\ExpanderDemo.csproj", "{FECD6896-14DE-4300-BA37-6FA44862AE05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{69A4D16C-4AF2-4621-BFDA-17ADA4E88158}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69A4D16C-4AF2-4621-BFDA-17ADA4E88158}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69A4D16C-4AF2-4621-BFDA-17ADA4E88158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FECD6896-14DE-4300-BA37-6FA44862AE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECD6896-14DE-4300-BA37-6FA44862AE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECD6896-14DE-4300-BA37-6FA44862AE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECD6896-14DE-4300-BA37-6FA44862AE05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
