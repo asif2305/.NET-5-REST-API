@@ -3,8 +3,8 @@ syntax = "proto3";
 option csharp_namespace = "GrpcServer.Protos";
 
 service Customer{
-	rpc GetCustomerInfo (CustomerLookModel) returns (CustomerModel);
-	rpc GetNewCustomers (NewCustomerRequest) returns (stream CustomerModel);
+	rpc GetCustomerInfo (CustomerLookModel) returns (CustomerModel); // unary rpc
+	rpc GetNewCustomers (NewCustomerRequest) returns (stream CustomerModel); // Server streaming rpc
 }
 
 message NewCustomerRequest{

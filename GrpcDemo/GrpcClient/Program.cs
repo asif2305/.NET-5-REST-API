@@ -21,7 +21,7 @@ namespace GrpcClient
            var clientRequested = new CustomerLookModel { UserId = 1};
            var customer =  await customerClient.GetCustomerInfoAsync(clientRequested);
             
-           Console.WriteLine($"{customer.FirstName}{customer.LastName}");
+            Console.WriteLine($"{customer.FirstName}{customer.LastName}");
             Console.WriteLine();
             Console.WriteLine("New Customer List ");
             using (var call = customerClient.GetNewCustomers(new NewCustomerRequest()))
@@ -34,8 +34,21 @@ namespace GrpcClient
                         $"{currentCustomer.IsAlive}");
                 }
             }
-           
+           var client3 = new Product.ProductClient(channel);
+            var productResponse = await client3.SaveProductAsync(new ProductModel
+            {
+                ProductName =  "Mackbook Pro",
+                ProductCode = "25652",
+                Price = 6000
+            });
+            Console.WriteLine($"{productResponse.StatusCode} | {productResponse.IsSuccessful}");
+            await channel.ShutdownAsync();
             Console.ReadLine();
+
+
+
+
+
         }
     }
 }
