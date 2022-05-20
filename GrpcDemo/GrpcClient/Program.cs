@@ -1,4 +1,5 @@
 ﻿using System;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Grpc.Net.Client;
 using GrpcServer;
@@ -34,20 +35,23 @@ namespace GrpcClient
                         $"{currentCustomer.IsAlive}");
                 }
             }
-           var client3 = new Product.ProductClient(channel);
+            var client3 = new Product.ProductClient(channel);
+            var stockDate = DateTime.SpecifyKind(new DateTime(2022,05,20), DateTimeKind.Utc);
             var productResponse = await client3.SaveProductAsync(new ProductModel
             {
-                ProductName =  "Mackbook Pro",
+                ProductName = "Mackbook Pro",
                 ProductCode = "25652",
-                Price = 6000
-            });
+                Price = 6000,
+                StockDate = Timestamp.FromDateTime(stockDate)
+            }); ;
             Console.WriteLine($"{productResponse.StatusCode} | {productResponse.IsSuccessful}");
 
             var productResponse2 = await client3.GetProductsAsync(new Google.Protobuf.WellKnownTypes.Empty());
 
             foreach(var product in productResponse2.Products)
             {
-                Console.WriteLine($"{product.ProductName} | {product.ProductCode} | {product.Price}");
+                var stockDate2 = product.StockDate.ToDateTime();
+                Console.WriteLine($"{product.ProductName} | {product.ProductCode} | {product.Price} | {stockDate2.ToString("dd-MM-yyyy")}");
             }
 
 

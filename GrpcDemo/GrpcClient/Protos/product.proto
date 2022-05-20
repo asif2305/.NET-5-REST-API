@@ -1,6 +1,8 @@
 syntax = "proto3";
 // empty parameter passing
 import "google/protobuf/empty.proto";
+// timestamp
+import "google/protobuf/timestamp.proto";
 option csharp_namespace = "GrpcServer.Protos";
 package product;
 
@@ -16,6 +18,8 @@ message ProductModel{
 	string ProductName = 1;
 	string ProductCode = 2;
 	double Price = 3;
+	google.protobuf.Timestamp StockDate =4;
+
 }
 message ProductSaveResponse{
 	int32 StatusCode = 1;
