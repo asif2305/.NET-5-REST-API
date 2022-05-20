@@ -24,16 +24,20 @@ namespace GrpcServer.Protos {
     static ProductReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRQcm90b3MvcHJvZHVjdC5wcm90bxIHcHJvZHVjdCJHCgxQcm9kdWN0TW9k",
-            "ZWwSEwoLUHJvZHVjdE5hbWUYASABKAkSEwoLUHJvZHVjdENvZGUYAiABKAkS",
-            "DQoFUHJpY2UYAyABKAEiPwoTUHJvZHVjdFNhdmVSZXNwb25zZRISCgpTdGF0",
-            "dXNDb2RlGAEgASgFEhQKDElzU3VjY2Vzc2Z1bBgCIAEoCDJNCgdQcm9kdWN0",
-            "EkIKC1NhdmVQcm9kdWN0EhUucHJvZHVjdC5Qcm9kdWN0TW9kZWwaHC5wcm9k",
-            "dWN0LlByb2R1Y3RTYXZlUmVzcG9uc2VCFKoCEUdycGNTZXJ2ZXIuUHJvdG9z",
-            "YgZwcm90bzM="));
+            "ChRQcm90b3MvcHJvZHVjdC5wcm90bxIHcHJvZHVjdBobZ29vZ2xlL3Byb3Rv",
+            "YnVmL2VtcHR5LnByb3RvIjYKC1Byb2R1Y3RMaXN0EicKCHByb2R1Y3RzGAEg",
+            "AygLMhUucHJvZHVjdC5Qcm9kdWN0TW9kZWwiRwoMUHJvZHVjdE1vZGVsEhMK",
+            "C1Byb2R1Y3ROYW1lGAEgASgJEhMKC1Byb2R1Y3RDb2RlGAIgASgJEg0KBVBy",
+            "aWNlGAMgASgBIj8KE1Byb2R1Y3RTYXZlUmVzcG9uc2USEgoKU3RhdHVzQ29k",
+            "ZRgBIAEoBRIUCgxJc1N1Y2Nlc3NmdWwYAiABKAgyigEKB1Byb2R1Y3QSQgoL",
+            "U2F2ZVByb2R1Y3QSFS5wcm9kdWN0LlByb2R1Y3RNb2RlbBocLnByb2R1Y3Qu",
+            "UHJvZHVjdFNhdmVSZXNwb25zZRI7CgtHZXRQcm9kdWN0cxIWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eRoULnByb2R1Y3QuUHJvZHVjdExpc3RCFKoCEUdycGNT",
+            "ZXJ2ZXIuUHJvdG9zYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.Protos.ProductList), global::GrpcServer.Protos.ProductList.Parser, new[]{ "Products" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.Protos.ProductModel), global::GrpcServer.Protos.ProductModel.Parser, new[]{ "ProductName", "ProductCode", "Price" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.Protos.ProductSaveResponse), global::GrpcServer.Protos.ProductSaveResponse.Parser, new[]{ "StatusCode", "IsSuccessful" }, null, null, null, null)
           }));
@@ -42,6 +46,184 @@ namespace GrpcServer.Protos {
 
   }
   #region Messages
+  public sealed partial class ProductList : pb::IMessage<ProductList>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProductList> _parser = new pb::MessageParser<ProductList>(() => new ProductList());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProductList> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcServer.Protos.ProductReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductList() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductList(ProductList other) : this() {
+      products_ = other.products_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductList Clone() {
+      return new ProductList(this);
+    }
+
+    /// <summary>Field number for the "products" field.</summary>
+    public const int ProductsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::GrpcServer.Protos.ProductModel> _repeated_products_codec
+        = pb::FieldCodec.ForMessage(10, global::GrpcServer.Protos.ProductModel.Parser);
+    private readonly pbc::RepeatedField<global::GrpcServer.Protos.ProductModel> products_ = new pbc::RepeatedField<global::GrpcServer.Protos.ProductModel>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::GrpcServer.Protos.ProductModel> Products {
+      get { return products_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProductList);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProductList other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!products_.Equals(other.products_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= products_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      products_.WriteTo(output, _repeated_products_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      products_.WriteTo(ref output, _repeated_products_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += products_.CalculateSize(_repeated_products_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProductList other) {
+      if (other == null) {
+        return;
+      }
+      products_.Add(other.products_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            products_.AddEntriesFrom(input, _repeated_products_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            products_.AddEntriesFrom(ref input, _repeated_products_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class ProductModel : pb::IMessage<ProductModel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -56,7 +238,7 @@ namespace GrpcServer.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.Protos.ProductReflection.Descriptor.MessageTypes[0]; }
+      get { return global::GrpcServer.Protos.ProductReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -319,7 +501,7 @@ namespace GrpcServer.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.Protos.ProductReflection.Descriptor.MessageTypes[1]; }
+      get { return global::GrpcServer.Protos.ProductReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

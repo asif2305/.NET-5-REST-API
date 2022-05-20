@@ -42,6 +42,15 @@ namespace GrpcClient
                 Price = 6000
             });
             Console.WriteLine($"{productResponse.StatusCode} | {productResponse.IsSuccessful}");
+
+            var productResponse2 = await client3.GetProductsAsync(new Google.Protobuf.WellKnownTypes.Empty());
+
+            foreach(var product in productResponse2.Products)
+            {
+                Console.WriteLine($"{product.ProductName} | {product.ProductCode} | {product.Price}");
+            }
+
+
             await channel.ShutdownAsync();
             Console.ReadLine();
 

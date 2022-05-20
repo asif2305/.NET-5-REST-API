@@ -1,12 +1,17 @@
 syntax = "proto3";
-
+// empty parameter passing
+import "google/protobuf/empty.proto";
 option csharp_namespace = "GrpcServer.Protos";
 package product;
 
 service Product{
 	rpc SaveProduct(ProductModel) returns (ProductSaveResponse);
+	rpc GetProducts(google.protobuf.Empty) returns (ProductList);
 }
 
+message ProductList{
+	repeated ProductModel products = 1;
+}
 message ProductModel{
 	string ProductName = 1;
 	string ProductCode = 2;
