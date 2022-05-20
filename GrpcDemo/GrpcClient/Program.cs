@@ -9,7 +9,7 @@ namespace GrpcClient
 {
     class Program
     {
-        static async Task  Main(string[] args)
+        public static async Task  Main(string[] args)
         {
             var input = new HelloRequest { Name = "Tim" };
             var channel = GrpcChannel.ForAddress("https://localhost:7078");
@@ -55,13 +55,26 @@ namespace GrpcClient
             }
 
 
+            // Server Streaming RPC : Client send a single request and server respond back with multiple responses.
+
+            await ServerStreamingDemo();
+             Console.ReadLine();
+          
+
+        }
+        private static async Task ServerStreamingDemo()
+        {
+            var channel = GrpcChannel.ForAddress("https://localhost:7078");
+            var client = new ServerStreaming.ServerStreamingClient(channel);
+            var response = client.ServerStreamingDemo(new Test { TestMessage ="Test"});
+            while (await response.ResponseStream.MoveNext(CancellationToken.None))
+            {
+                var value = response.ResponseStream.Current.TestMessage;
+                Console.WriteLine(value);
+            }
+            Console.WriteLine("Server Streaming Completed");
             await channel.ShutdownAsync();
-            Console.ReadLine();
-
-
-
-
-
+           
         }
     }
 }

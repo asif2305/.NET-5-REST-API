@@ -11,6 +11,7 @@
     <None Remove="Protos\customer.proto" />
     <None Remove="Protos\greet.proto" />
     <None Remove="Protos\product.proto" />
+    <None Remove="Protos\serverStreaming.proto" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,7 @@
     <Protobuf Include="Protos\customer.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\product.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\serverStreaming.proto" GrpcServices="Client" />
   </ItemGroup>
 
 </Project>

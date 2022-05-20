@@ -1,8 +1,3 @@
-D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.csproj.AssemblyReference.cache
-D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.GeneratedMSBuildEditorConfig.editorconfig
-D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.AssemblyInfoInputs.cache
-D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.AssemblyInfo.cs
-D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.csproj.CoreCompileInputs.cache
 D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\bin\Debug\net6.0\GrpcClient.exe
 D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\bin\Debug\net6.0\GrpcClient.deps.json
 D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\bin\Debug\net6.0\GrpcClient.runtimeconfig.json
@@ -13,6 +8,11 @@ D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\bin\Debug\net6
 D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\bin\Debug\net6.0\Grpc.Net.Client.dll
 D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\bin\Debug\net6.0\Grpc.Net.Common.dll
 D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.csproj.AssemblyReference.cache
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.AssemblyInfoInputs.cache
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.AssemblyInfo.cs
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.csproj.CoreCompileInputs.cache
 D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.csproj.CopyComplete
 D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\GrpcClient.dll
 D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\GrpcDemo\GrpcClient\obj\Debug\net6.0\refint\GrpcClient.dll
