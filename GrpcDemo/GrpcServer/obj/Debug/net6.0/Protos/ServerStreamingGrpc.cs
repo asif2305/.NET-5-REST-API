@@ -56,6 +56,14 @@ namespace GrpcServer.Protos {
         __Marshaller_serverStreaming_Test,
         __Marshaller_serverStreaming_Test);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test> __Method_ClientStreamingDemo = new grpc::Method<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test>(
+        grpc::MethodType.ClientStreaming,
+        __ServiceName,
+        "ClientStreamingDemo",
+        __Marshaller_serverStreaming_Test,
+        __Marshaller_serverStreaming_Test);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -72,6 +80,12 @@ namespace GrpcServer.Protos {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::GrpcServer.Protos.Test> ClientStreamingDemo(grpc::IAsyncStreamReader<global::GrpcServer.Protos.Test> requestStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -80,7 +94,8 @@ namespace GrpcServer.Protos {
     public static grpc::ServerServiceDefinition BindService(ServerStreamingBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ServerStreamingDemo, serviceImpl.ServerStreamingDemo).Build();
+          .AddMethod(__Method_ServerStreamingDemo, serviceImpl.ServerStreamingDemo)
+          .AddMethod(__Method_ClientStreamingDemo, serviceImpl.ClientStreamingDemo).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -91,6 +106,7 @@ namespace GrpcServer.Protos {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ServerStreamingBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ServerStreamingDemo, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test>(serviceImpl.ServerStreamingDemo));
+      serviceBinder.AddMethod(__Method_ClientStreamingDemo, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test>(serviceImpl.ClientStreamingDemo));
     }
 
   }

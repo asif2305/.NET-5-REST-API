@@ -6,6 +6,7 @@ package serverStreaming;
 
 service ServerStreaming{
 	rpc ServerStreamingDemo(Test) returns (stream Test);
+	rpc ClientStreamingDemo(stream Test) returns(Test);
 }
 message Test{
 	string TestMessage = 1;

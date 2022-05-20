@@ -56,6 +56,14 @@ namespace GrpcServer.Protos {
         __Marshaller_serverStreaming_Test,
         __Marshaller_serverStreaming_Test);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test> __Method_ClientStreamingDemo = new grpc::Method<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test>(
+        grpc::MethodType.ClientStreaming,
+        __ServiceName,
+        "ClientStreamingDemo",
+        __Marshaller_serverStreaming_Test,
+        __Marshaller_serverStreaming_Test);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -98,6 +106,16 @@ namespace GrpcServer.Protos {
       public virtual grpc::AsyncServerStreamingCall<global::GrpcServer.Protos.Test> ServerStreamingDemo(global::GrpcServer.Protos.Test request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ServerStreamingDemo, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncClientStreamingCall<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test> ClientStreamingDemo(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ClientStreamingDemo(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncClientStreamingCall<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test> ClientStreamingDemo(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncClientStreamingCall(__Method_ClientStreamingDemo, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
