@@ -64,6 +64,14 @@ namespace GrpcServer.Protos {
         __Marshaller_serverStreaming_Test,
         __Marshaller_serverStreaming_Test);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test> __Method_BidirectionalStreamingDemo = new grpc::Method<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "BidirectionalStreamingDemo",
+        __Marshaller_serverStreaming_Test,
+        __Marshaller_serverStreaming_Test);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -86,6 +94,12 @@ namespace GrpcServer.Protos {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task BidirectionalStreamingDemo(grpc::IAsyncStreamReader<global::GrpcServer.Protos.Test> requestStream, grpc::IServerStreamWriter<global::GrpcServer.Protos.Test> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -95,7 +109,8 @@ namespace GrpcServer.Protos {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ServerStreamingDemo, serviceImpl.ServerStreamingDemo)
-          .AddMethod(__Method_ClientStreamingDemo, serviceImpl.ClientStreamingDemo).Build();
+          .AddMethod(__Method_ClientStreamingDemo, serviceImpl.ClientStreamingDemo)
+          .AddMethod(__Method_BidirectionalStreamingDemo, serviceImpl.BidirectionalStreamingDemo).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -107,6 +122,7 @@ namespace GrpcServer.Protos {
     {
       serviceBinder.AddMethod(__Method_ServerStreamingDemo, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test>(serviceImpl.ServerStreamingDemo));
       serviceBinder.AddMethod(__Method_ClientStreamingDemo, serviceImpl == null ? null : new grpc::ClientStreamingServerMethod<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test>(serviceImpl.ClientStreamingDemo));
+      serviceBinder.AddMethod(__Method_BidirectionalStreamingDemo, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::GrpcServer.Protos.Test, global::GrpcServer.Protos.Test>(serviceImpl.BidirectionalStreamingDemo));
     }
 
   }

@@ -59,7 +59,8 @@ namespace GrpcClient
 
 
             //await ServerStreamingDemo();
-            await ClientStreamingDemo();
+            //await ClientStreamingDemo();
+            await BidirectionalStreamingDemo();
             Console.ReadLine();
           
 
@@ -78,6 +79,7 @@ namespace GrpcClient
             }
             await stream.RequestStream.CompleteAsync();
             Console.WriteLine("Client Streaming Completed");
+            await channel.ShutdownAsync();
 
         }
 
@@ -96,6 +98,35 @@ namespace GrpcClient
             await channel.ShutdownAsync();
            
         }
+        // Bidirectional Streaming RPC: Both request and response will be a stream of messages.
+        public static async Task BidirectionalStreamingDemo()
+        {
+            var channel = GrpcChannel.ForAddress("https://localhost:7078");
+            var client = new ServerStreaming.ServerStreamingClient(channel);
+            var stream = client.BidirectionalStreamingDemo();
+            var requestTask = Task.Run(async () =>
+            {
+                for(int i=0; i<10; i++)
+                {
+                    var rN = random.Next(1, 10);
+                    await Task.Delay(rN * 1000);
+                    await stream.RequestStream.WriteAsync(new Test { TestMessage = i.ToString() });
+                    Console.WriteLine("Send request"+ i);
+                }
+                await stream.RequestStream.CompleteAsync();
+            });
+            var responseTask = Task.Run(async () =>
+            {
+                while (await stream.ResponseStream.MoveNext(CancellationToken.None))
+                {
+                   Console.WriteLine("Received Response: "+ stream.ResponseStream.Current.TestMessage);
+                }
+                Console.WriteLine("Response Stream Completed");
+            });
+            await Task.WhenAll(requestTask, responseTask);
+            await channel.ShutdownAsync();
+        }
+
     }
 }
 
