@@ -6,6 +6,10 @@ namespace TodoApp.Controllers
     [ApiController]
     public class TodoController : ControllerBase
     {
-       
+       [HttpGet]
+       public IActionResult TestRun()
+        {
+            return Ok("Success");
+        }
     }
 }
