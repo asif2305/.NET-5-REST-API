@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TodoApp.Data;
+using TodoApp.Models;
 
 namespace TodoApp.Controllers
 {
@@ -6,10 +9,72 @@ namespace TodoApp.Controllers
     [ApiController]
     public class TodoController : ControllerBase
     {
-       [HttpGet]
-       public IActionResult TestRun()
+        private readonly ApiDbContext _context;
+
+        public TodoController(ApiDbContext context)
         {
-            return Ok("Success");
+            _context = context;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetItems()
+        {
+            var items = await _context.Items.ToListAsync();
+            return Ok(items); // status code 200 or json data
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateItem(ItemData data)
+        {
+            if (ModelState.IsValid) { 
+             await _context.Items.AddAsync(data);
+             await _context.SaveChangesAsync();
+
+                return CreatedAtAction("GetItem", new {data.Id}, data); // return the saving data
+
+            }
+
+            return new JsonResult("Somethig went wrong") { StatusCode = 500};
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetItem(int id)
+        {
+            var item = await _context.Items.FirstOrDefaultAsync(x=>x.Id == id);
+            if(item == null)
+            {
+                return NotFound();
+            }
+           return Ok(item);
+        }
+
+        // update all data
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateItem(int id, ItemData item)
+        {
+            if(id!= item.Id) return BadRequest();
+            var existItem = await _context.Items.FirstOrDefaultAsync(x=>x.Id == id);
+            if(existItem == null)
+                return NotFound();
+            existItem.Title = item.Title;
+            existItem.Description = item.Description;
+            existItem.Done = item.Done;
+
+            // Implement the changes on the database level
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> DeleteItem(int id)
+        {
+            var existItem = await _context.Items.FirstOrDefaultAsync(x=>x.Id == id);
+            if(existItem == null) return NotFound();
+            _context.Items.Remove(existItem);
+            await _context.SaveChangesAsync();
+            return Ok(existItem);
         }
     }
 }
