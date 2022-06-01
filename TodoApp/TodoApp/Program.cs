@@ -27,7 +27,7 @@ var tokenValidationParams = new TokenValidationParameters
     RequireExpirationTime = false,
 
 };
-
+builder.Services.AddSingleton(tokenValidationParams);
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

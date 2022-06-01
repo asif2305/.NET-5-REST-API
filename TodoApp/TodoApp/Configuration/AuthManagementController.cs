@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using TodoApp.Data;
+using TodoApp.Models;
 using TodoApp.Models.DataTransferObject.Requests;
 using TodoApp.Models.DataTransferObject.Responses;
 
@@ -18,13 +20,18 @@ namespace TodoApp.Configuration
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly JwtConfig _jwtConfig;
-
+        private readonly TokenValidationParameters _tokenValidationParameters; // for refresh token
+        private readonly ApiDbContext _apiDbContext;
 
         public AuthManagementController(UserManager<IdentityUser> userManager,
-                                        IOptionsMonitor<JwtConfig> optionsMonitor)
+                                        IOptionsMonitor<JwtConfig> optionsMonitor,
+                                         TokenValidationParameters tokenValidationParameters,
+                                         ApiDbContext apiDbContext)
         {
             _userManager = userManager;
             _jwtConfig = optionsMonitor.CurrentValue;
+            _tokenValidationParameters = tokenValidationParameters;
+            _apiDbContext = apiDbContext;
         }
 
         [HttpPost]
@@ -55,13 +62,9 @@ namespace TodoApp.Configuration
                     var isCreated = await _userManager.CreateAsync(newUser, user.Password);
                     if (isCreated.Succeeded)
                     {
-                        var jwtToken = GenerateJwtToken(newUser);
-                        return Ok(new RegistrationResponse()
-                        {
-                            Success = true,
-                            Token = jwtToken
-                        });
-                    }
+                        var jwtToken = await GenerateJwtToken(newUser);
+                        return Ok(jwtToken);
+                     }
                     else
                     {
                         return BadRequest(new RegistrationResponse()
@@ -113,12 +116,8 @@ namespace TodoApp.Configuration
                         Success = false
                     });
                 }
-                var jwtToken = GenerateJwtToken(existingUser);
-                return Ok(new RegistrationResponse()
-                {
-                    Success = true,
-                    Token = jwtToken
-                });
+                var jwtToken = await GenerateJwtToken(existingUser);
+                return Ok(jwtToken);
 
             }
 
@@ -131,7 +130,7 @@ namespace TodoApp.Configuration
                 Success = false
             });
         }
-        private string GenerateJwtToken(IdentityUser user)
+        private async Task<AuthResult> GenerateJwtToken(IdentityUser user)
         {
             var jwtTokenHandler = new JwtSecurityTokenHandler();
 
@@ -151,8 +150,36 @@ namespace TodoApp.Configuration
             };
             var token = jwtTokenHandler.CreateToken(tokenDescriptor);
             var jwtToken = jwtTokenHandler.WriteToken(token); // security token
-            return jwtToken;
+
+            // refresh token
+            var refreshToken = new RefreshToken()
+            {
+                JwtId = token.Id,
+                IsUsed = false,
+                IsRevorked = false,
+                UserId = user.Id,
+                AddedDate = DateTime.UtcNow,
+                ExpiryDate = DateTime.UtcNow.AddMonths(6),
+                Token = RandomString(35) + Guid.NewGuid()
+            };
+            await _apiDbContext.RefreshToken.AddAsync(refreshToken);
+            await _apiDbContext.SaveChangesAsync();
+            return new AuthResult()
+            {
+                Token = jwtToken,
+                Success = true,
+                RefreshToken = refreshToken.Token
+
+            };
 
         }
+        private string RandomString(int length)
+        {
+            var random = new Random();
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                      .Select(x => x[random.Next(x.Length)]).ToArray());
+        }
+
     }
 }
