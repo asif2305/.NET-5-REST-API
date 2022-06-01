@@ -16,6 +16,18 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // JWT config
 builder.Services.Configure<JwtConfig>(builder.Configuration.GetSection("JwtConfig"));
+var key = Encoding.ASCII.GetBytes(builder.Configuration["JwtConfig:Secret"]);
+var tokenValidationParams = new TokenValidationParameters
+{
+    ValidateIssuerSigningKey = true,
+    IssuerSigningKey = new SymmetricSecurityKey(key),
+    ValidateIssuer = false,
+    ValidateAudience = false,
+    ValidateLifetime = true,
+    RequireExpirationTime = false,
+
+};
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -24,18 +36,8 @@ builder.Services.AddAuthentication(options =>
 })
  .AddJwtBearer(jwt =>
    {
-       var key = Encoding.ASCII.GetBytes(builder.Configuration["JwtConfig:Secret"]);
        jwt.SaveToken = true;
-       jwt.TokenValidationParameters = new TokenValidationParameters
-       {
-           ValidateIssuerSigningKey = true,
-           IssuerSigningKey = new SymmetricSecurityKey(key),
-           ValidateIssuer = false,
-           ValidateAudience = false,
-           ValidateLifetime = true,
-           RequireExpirationTime = false,
-
-       };
+       jwt.TokenValidationParameters = tokenValidationParams;
    });
 // identity configuration
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
