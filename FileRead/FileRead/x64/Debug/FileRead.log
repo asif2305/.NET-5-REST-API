@@ -1,0 +1,2 @@
+﻿  FileRead.cpp
+D:\Github Repo\GitHub\ASP.NET\.NET-5-REST-API\FileRead\FileRead\FileRead.cpp(8,10): fatal error C1083: Cannot open include file: 'matplotlibcpp.h': No such file or directory

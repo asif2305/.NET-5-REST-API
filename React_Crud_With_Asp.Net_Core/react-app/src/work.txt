@@ -1,0 +1,25 @@
+App Structure
+...................
+. src 
++----action
+       -- api.js(handle all http request)
+       -- dcandidate.js(Redux actions & action creators)
+       -- store.js(configure redux store)
++----Components
+       -- DCandidateForm.js(form operation)
+       -- DCandidate.js(list of records)
+       -- useForm.js(handle common form operation)
++----reducers
+       -- dCandidate.js
+       -- index.js
++----App.js
++----index.js
++----index.css   
+
+
+few package
+redux, react-redux, redux-thunk
+action -- create update,delete
+reducers 
+store
+      
